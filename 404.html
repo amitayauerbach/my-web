@@ -10,8 +10,13 @@
   <div class="error-container">
     <h1>404</h1>
     <p>Oops! The page you're looking for doesn't exist.</p>
-    <a href="/my-web/" class="home-link">Go Back Home</a>
-  </div>
+    <a id="home-link" class="home-link">Go Back Home</a>
+    <script>
+      // Dynamically set the correct link to the home page
+      const homeLink = document.getElementById('home-link');
+      homeLink.href = `${window.location.origin}/my-web/`;
+    </script>
+    </div>
 </body>
 </html>
     
