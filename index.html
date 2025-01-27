@@ -15,6 +15,37 @@
 
   <!-- Scripts -->
   <script src="https://kit.fontawesome.com/2ceada1413.js" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js"></script>
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyD6uC_03683_tcXwvbJcZpsBa9nCwKuPBE",
+    authDomain: "my-web-bb3f4.firebaseapp.com",
+    projectId: "my-web-bb3f4",
+    storageBucket: "my-web-bb3f4.firebasestorage.app",
+    messagingSenderId: "651878274064",
+    appId: "1:651878274064:web:e502a89c69166bd43ee695",
+    measurementId: "G-8EYQ4BBCHF"
+    };  
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+  </script>
+  <script>
+    function trackFormSubmission() {
+      firebase.analytics().logEvent('contact_form_submission', {
+        timestamp: new Date().toISOString()
+      });
+    }
+  </script>
+  <script>
+    function trackCVDownload() {
+      firebase.analytics().logEvent('cv_download', {
+        timestamp: new Date().toISOString()
+      });
+    }
+  </script>
+  
 </head>
 <body id= "home" class="roboto-mono-body">
   <!-- Navigation -->
@@ -105,8 +136,8 @@
       </div>
       <br>
       <div class="form-container">
-        <form action="/send_email" method="post">
-          <label for="name">Name</label>
+        <form action="/send_email" method="post" onsubmit="trackFormSubmission()">
+            <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
           <label for="email">Email</label>
@@ -123,8 +154,8 @@
     <section id="cv">
        <h2>CV</h2>
           <div class="cv-download-container">
-            <a href="CV Amitay Auerbach 2025.pdf" download class="cv-download-link">
-              <div class="cv-download-card">
+            <a href="CV Amitay Auerbach 2025.pdf" download class="cv-download-link" onclick="trackCVDownload()">
+                <div class="cv-download-card">
                 <i class="fas fa-file-download"></i>
                 <span>Tap to download CV</span>
               </div>
