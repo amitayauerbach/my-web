@@ -12,7 +12,7 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = 'amitayab@gmail.com'  # Replace with your email
-app.config['MAIL_PASSWORD'] = 'dbzs zmrx zcod gicl'  # Replace with your app password
+app.config['MAIL_PASSWORD'] = 'upte aewy otup klxh'  # Replace with your app password
 app.config['MAIL_DEFAULT_SENDER'] = 'amitayab@gmail.com'
 
 mail = Mail(app)
