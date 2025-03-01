@@ -1,6 +1,6 @@
 function copyEmail(event) {
     event.preventDefault();
-    const email = 'patches.acronym.3d@icloud.com';
+    const email = 'amitayay1@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
       const popup = document.createElement('div');
       popup.className = 'email-popup';
