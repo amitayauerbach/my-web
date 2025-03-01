@@ -11,9 +11,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'amitayab@gmail.com'  # Replace with your email
-app.config['MAIL_PASSWORD'] = 'upte aewy otup klxh'  # Replace with your app password
-app.config['MAIL_DEFAULT_SENDER'] = 'amitayab@gmail.com'
+app.config['MAIL_USERNAME'] = 'amitayay1@gmail.com'  # Replace with your email
+app.config['MAIL_PASSWORD'] = 'brbv hbya dtzs xvdn'  # Replace with your app password
+app.config['MAIL_DEFAULT_SENDER'] = 'amitayay1@gmail.com'
 
 mail = Mail(app)
 
@@ -30,7 +30,7 @@ def send_email():
     message_body = request.form.get("message")
 
     # Create the email message
-    msg = Message("New Contact Form Submission", recipients=["amitayab@gmail.com"])
+    msg = Message("New Contact Form Submission", recipients=["amitayay1@gmail.com"])
     msg.body = f"""
     Name: {name}
     Email: {email}
