@@ -30,7 +30,7 @@ def send_email():
     message_body = request.form.get("message")
 
     # Create the email message
-    msg = Message("New Contact Form Submission", recipients=["amitayay1@gmail.com"])
+    msg = Message("New Contact Form Submission", recipients=["amitayab@gmail.com"])
     msg.body = f"""
     Name: {name}
     Email: {email}
